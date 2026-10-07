@@ -2,17 +2,12 @@
 
 종목코드를 지정해 네이버페이 증권 모바일 종목 토론 게시판의 공개 게시글을 수집합니다. 페이지 HTML을 파싱하지 않고 내부 JSON API를 호출합니다.
 
-## 설치
-
-```bash
-python -m pip install -r requirements.txt
-```
-
 ## 사용법
 
 인자 없이 실행하면 종목코드와 필터, 페이지 수, 출력 형식을 차례로 입력하는 대화형 메뉴가 표시됩니다. 기본값을 사용하려면 Enter를 누르세요. 결과는 프로젝트 내 `output` 폴더에 종목코드와 형식에 맞는 파일명으로 저장되며, 동시에 표준 출력에도 표시됩니다.
 
 ```bash
+python -m pip install -r requirements.txt  // 의존성 설치
 python start.py
 ```
 
