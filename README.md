@@ -4,7 +4,11 @@
 
 ## 사용법
 
-인자 없이 실행하면 종목코드와 필터, 페이지 수, 출력 형식을 차례로 입력하는 대화형 메뉴가 표시됩니다. 기본값을 사용하려면 Enter를 누르세요. 결과는 프로젝트 내 `output` 폴더에 종목코드와 형식에 맞는 파일명으로 저장되며, 동시에 표준 출력에도 표시됩니다.
+인자 없이 실행하면 종목코드와 필터, 페이지 수, 출력 형식을 차례로 입력하는 대화형 메뉴가 표시됩니다. 
+
+기본값을 사용하려면 Enter를 누르세요. 
+
+결과는 프로젝트 내 `output` 폴더에 종목코드와 형식에 맞는 파일명으로 저장되며, 동시에 표준 출력에도 표시됩니다.
 
 ```bash
 python -m pip install -r requirements.txt  // 의존성 설치
@@ -51,7 +55,13 @@ python start.py --help
 | `--format` | `csv` | 출력 형식 (`csv`, `json`) |
 | `-o`, `--output` | `output/<종목코드>.<형식>` | 결과 파일 경로 |
 
-수집 결과에는 `stock_code`, `article_id`, `created_at`, `title`, `content` 필드가 포함됩니다. CSV가 기본 형식이며 파일에는 `stock_code`를 제외한 `article_id`, `created_at`, `title`, `content` 열로 저장됩니다. 표준 출력에서는 CSV 결과를 읽기 쉬운 게시글별 형식으로 표시합니다. JSON은 `--format json`으로 선택할 수 있으며, 파일에는 JSON으로 저장되고 표준 출력에도 JSON으로 표시됩니다. 수집 건수와 오류 메시지는 표준 오류로 출력됩니다.
+수집 결과에는 `stock_code`, `article_id`, `created_at`, `title`, `content` 필드가 포함됩니다. 
+
+CSV가 기본 형식이며 파일에는 `stock_code`를 제외한 `article_id`, `created_at`, `title`, `content` 열로 저장됩니다. 
+
+표준 출력에서는 CSV 결과를 읽기 쉬운 게시글별 형식으로 표시합니다. JSON은 `--format json`으로 선택할 수 있으며, 파일에는 JSON으로 저장되고 표준 출력에도 JSON으로 표시됩니다. 
+
+수집 건수와 오류 메시지는 표준 오류로 출력됩니다.
 
 ## Python에서 사용
 
@@ -64,4 +74,6 @@ print(posts[0] if posts else "게시물이 없습니다")
 
 ## 참고
 
-네이버 토론 목록 API는 공식 공개 API가 아니며 변경될 수 있습니다. API 주소와 요청 파라미터, JSON 응답 경로 및 필드 매핑은 `crawler/config.py`에서 관리합니다. 현재 설정은 LG전자(`066570`) 종목 게시판에 실제 요청하여 확인했습니다.
+네이버 토론 목록 API는 공식 공개 API가 아니며 변경될 수 있습니다. 
+
+API 주소와 요청 파라미터, JSON 응답 경로 및 필드 매핑은 `crawler/config.py`에서 관리합니다. 
