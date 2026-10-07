@@ -5,7 +5,6 @@
 ## 설치
 
 ```bash
-conda activate crawler
 python -m pip install -r requirements.txt
 ```
 
