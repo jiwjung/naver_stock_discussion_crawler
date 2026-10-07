@@ -5,7 +5,6 @@
 ## 요구사항
 
 - Python 3.10 이상
-- Conda 환경 `crawler` (또는 별도의 Python 환경)
 
 ## 설치
 
